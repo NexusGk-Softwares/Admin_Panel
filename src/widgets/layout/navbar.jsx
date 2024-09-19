@@ -7,11 +7,13 @@ import {
   Typography,
   Button,
   IconButton,
+  Switch,
 } from "@material-tailwind/react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 export function Navbar({ brandName, routes, action }) {
   const [openNav, setOpenNav] = React.useState(false);
+  const [darkMode, setDarkMode] = React.useState(false);
 
   React.useEffect(() => {
     window.addEventListener(
@@ -20,6 +22,16 @@ export function Navbar({ brandName, routes, action }) {
     );
   }, []);
 
+  // Function to toggle dark mode
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (darkMode) {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+  };
+
   const navList = (
     <ul className="mb-4 mt-2 flex flex-col gap-2 lg:mb-0 lg:mt-0 lg:flex-row lg:items-center lg:gap-6">
       {routes.map(({ name, path, icon }) => (
@@ -27,7 +39,7 @@ export function Navbar({ brandName, routes, action }) {
           key={name}
           as="li"
           variant="small"
-          color="blue-gray"
+          color={darkMode ? "white" : "blue-gray"}
           className="capitalize"
         >
           <Link to={path} className="flex items-center gap-1 p-1 font-normal">
@@ -43,8 +55,8 @@ export function Navbar({ brandName, routes, action }) {
   );
 
   return (
-    <MTNavbar className="p-3">
-      <div className="container mx-auto flex items-center justify-between text-blue-gray-900">
+    <MTNavbar className={`p-3 ${darkMode ? 'bg-gray-800 text-white' : 'bg-white text-blue-gray-900'}`}>
+      <div className="container mx-auto flex items-center justify-between">
         <Link to="/">
           <Typography
             variant="small"
@@ -57,6 +69,18 @@ export function Navbar({ brandName, routes, action }) {
         {React.cloneElement(action, {
           className: "hidden lg:inline-block",
         })}
+        {/* Dark Mode Toggle */}
+        <div className="flex items-center gap-2">
+          <Typography variant="small" color="blue-gray">
+            Dark Mode
+          </Typography>
+          <Switch
+            id="dark-mode-toggle"
+            checked={darkMode}
+            onChange={toggleDarkMode}
+            className="text-blue-gray-900"
+          />
+        </div>
         <IconButton
           variant="text"
           size="sm"
