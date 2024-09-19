@@ -35,15 +35,16 @@ export function Sidenav({ brandImg, brandName, routes }) {
         </Link>
         {/* Close Button */}
         <IconButton
-          variant="text"
-          color={sidenavType === "dark" ? "white" : "blue-gray"}
-          size="sm"
-          ripple={false}
-          className="grid rounded-br-none rounded-tl-none"
-          onClick={() => setOpenSidenav(dispatch, false)}
-        >
-          <XMarkIcon strokeWidth={2.5} className="h-5 w-5" />
-        </IconButton>
+  variant="text"
+  color={sidenavType === "dark" ? "white" : "blue-gray"}
+  size="sm"
+  ripple={false}
+  className="grid rounded-br-none rounded-tl-none lg:hidden" // Hide on large screens
+  onClick={() => setOpenSidenav(dispatch, false)}
+>
+  <XMarkIcon strokeWidth={2.5} className="h-5 w-5" />
+</IconButton>
+
       </div>
       <div className="m-4">
         {routes.map(({ layout, title, pages }, key) => (
