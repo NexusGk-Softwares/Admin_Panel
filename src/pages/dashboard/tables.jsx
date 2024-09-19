@@ -134,7 +134,7 @@ export function Tables() {
                       </td>
                       <td className={className}>
                         <Typography className="text-xs font-semibold text-blue-gray-600">
-                          ${price}
+                          Kshs.{price}
                         </Typography>
                       </td>
                       <td className={className}>
