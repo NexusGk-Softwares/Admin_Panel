@@ -1,6 +1,6 @@
 export const authorsTableData = [
   {
-    img: "/img/team-2.jpeg",
+    img: "/img/Holstein heifer grazing.jpeg",
     name: "John Michael",
     email: "john@creative-tim.com",
     job: ["Manager", "Organization"],
@@ -8,7 +8,7 @@ export const authorsTableData = [
     date: "23/04/18",
   },
   {
-    img: "/img/team-1.jpeg",
+    img: "/img/Simmental.jpeg",
     name: "Alexa Liras",
     email: "alexa@creative-tim.com",
     job: ["Programator", "Developer"],
@@ -16,7 +16,7 @@ export const authorsTableData = [
     date: "11/01/19",
   },
   {
-    img: "/img/team-4.jpeg",
+    img: "/img/Simmental.jpeg",
     name: "Laurent Perrier",
     email: "laurent@creative-tim.com",
     job: ["Executive", "Projects"],
@@ -24,7 +24,7 @@ export const authorsTableData = [
     date: "19/09/17",
   },
   {
-    img: "/img/team-3.jpeg",
+    img: "/img/Holstein.jpeg",
     name: "Michael Levi",
     email: "michael@creative-tim.com",
     job: ["Programator", "Developer"],
@@ -32,7 +32,7 @@ export const authorsTableData = [
     date: "24/12/08",
   },
   {
-    img: "/img/bruce-mars.jpeg",
+    img: "/img/Holstein.jpeg",
     name: "Bruce Mars",
     email: "bruce@creative-tim.com",
     job: ["Manager", "Executive"],
@@ -40,7 +40,7 @@ export const authorsTableData = [
     date: "04/10/21",
   },
   {
-    img: "/img/team-2.jpeg",
+    img: "/img/Holstein heifer grazing.jpeg",
     name: "Alexander",
     email: "alexander@creative-tim.com",
     job: ["Programator", "Developer"],
