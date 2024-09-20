@@ -52,18 +52,20 @@ export function Tables() {
   return (
     <div className="mt-12 mb-8 flex flex-col gap-12">
       {/* Dairy Cows Table */}
+      
+      
       <Card>
         <CardBody className="overflow-x-scroll px-0 pt-0 pb-2">
           <div className="flex justify-between items-center mb-2 px-4">
             {/* Table Title */}
-            <Typography variant="h2" color="blue" className="font-bold">
+            <Typography variant="h3"  color="blue" className="font-bold pl-2 pr-4 rounded-lg mt-6 bg-indigo-100 ">
               Dairy Cows Table
             </Typography>
             {/* Add Product Button */}
             <Button
               variant="gradient"
               color="blue"
-              className="text-white font-bold"
+              className="text-white mt-6 font-bold"
               onClick={handleOpen}
             >
               Add Product
@@ -173,7 +175,7 @@ export function Tables() {
 
       {/* Modal for Adding Product */}
       <Dialog open={open} handler={handleOpen} size="md">
-        <DialogHeader>Add New Product</DialogHeader>
+        <DialogHeader className="mt-3 text-justify  ">Add New Product</DialogHeader>
         <DialogBody divider>
           <form className="flex flex-col gap-2">
             {/* Column form layout */}
@@ -210,10 +212,19 @@ export function Tables() {
               value={gender}
               readOnly
             />
-            <Input
-              label="Image URL"
-              size="lg"
-            />
+            <form class="flex items-center space-x-6">
+              
+              <label class="block">
+                <span class="sr-only">Choose profile photo</span>
+                <input type="file" class="block w-full text-sm text-slate-500
+                  file:mr-4 file:py-2 file:px-4
+                  file:rounded-full file:border-0
+                  file:text-sm file:font-semibold
+                  file:bg-violet-50 file:text-violet-700
+                  hover:file:bg-violet-100
+                "/>
+              </label>
+            </form>
             <Textarea
               label="Description"
               size="lg"

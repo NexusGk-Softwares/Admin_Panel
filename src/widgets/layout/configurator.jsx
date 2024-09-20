@@ -71,6 +71,9 @@ export function Configurator() {
     >
       <div className="flex items-start justify-between px-6 pt-8 pb-6">
         <div>
+        <Typography variant="h2" color="blue-gray">
+            Kapkatet Dairy Farm
+          </Typography>
           <Typography variant="h5" color="blue-gray">
             Dashboard Configurator
           </Typography>
@@ -138,7 +141,7 @@ export function Configurator() {
           <div className="flex items-center justify-between py-5">
             <Typography variant="h6" color="blue-gray">
               Navbar Fixed
-            </Typography>
+            </Typography> 
             <Switch
               id="navbar-fixed"
               value={fixedNavbar}
